@@ -22,8 +22,8 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.1.1
-    commit: a76a44bc56ab3add98c456bc07e9c36227c859f6
+    tag: v0.2.0
+    commit: 48b2e7c7956d77dbda0250feb32282127b28b800
   - type: file
     url: https://files.pythonhosted.org/packages/c0/6c/9f840c2e55b67b90745af06a540964b73589256cb10cc10057c87ac78fc2/wheel-0.37.1.tar.gz
     sha256: e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4
@@ -65,3 +65,18 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/31/61/63ef60aca6de07eba1639d9d47f3f8e29462e8bb49d6a8dce9aeff240646/pyftpdlib-1.5.6.tar.gz
     sha256: fda655d81f29af52885ca2f8a2704134baed540f16d66a0b26e8fdfafd12db5e
+  - type: file
+    url: https://files.pythonhosted.org/packages/0b/94/409f75be3e2757131590373ba18bdae91b7e5fd6b98a1afaf135f00d687c/asyncssh-2.11.0-py3-none-any.whl
+    sha256: 7302348cbd54c58d3259da17f13e77912de1b005e366b15c8b183d948c8a91a8
+  - type: file
+    url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
+    sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
+  - type: file
+    url: https://files.pythonhosted.org/packages/72/df/4ea9faf234cdbef0ffa422aa43fe510d7b854375fd46381bf2c00e100f3e/zeroconf-0.39.0-py3-none-any.whl
+    sha256: 02989d759d48389e6a9132edcc6827d34f6367c043f63f708a220f9d89dc2604
+  - type: file
+    url: https://files.pythonhosted.org/packages/9c/1f/19ebc343cc71a7ffa78f17018535adc5cbdd87afb31d7c34874680148b32/ifaddr-0.2.0-py3-none-any.whl
+    sha256: 085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748
+  - type: file
+    url: https://files.pythonhosted.org/packages/d6/c1/8991e7c5385b897b8c020cdaad718c5b087a6626d1d11a23e1ea87e325a7/async_timeout-4.0.2-py3-none-any.whl
+    sha256: 8ca1e4fcf50d07413d66d1a5e416e42cfdf5851c981d679a09851a6853383b3c
