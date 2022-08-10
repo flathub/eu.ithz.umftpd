@@ -4,14 +4,12 @@ runtime-version: '42'
 sdk: org.gnome.Sdk
 command: umftpd
 finish-args:
-- --share=ipc
-- --socket=wayland
-- --socket=fallback-x11
 - --device=dri
-- --share=network
-- --filesystem=xdg-run/gvfsd
 - --filesystem=xdg-public-share
-- --talk-name=org.gtk.vfs.*
+- --share=ipc
+- --share=network
+- --socket=fallback-x11
+- --socket=wayland
 modules:
 - name: umftpd
   buildsystem: simple
@@ -22,8 +20,8 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.2.0
-    commit: 48b2e7c7956d77dbda0250feb32282127b28b800
+    tag: v0.2.1
+    commit: 8d93c824f4676eec54d8ee6ed1b2d8419e6de363
   - type: file
     url: https://files.pythonhosted.org/packages/c0/6c/9f840c2e55b67b90745af06a540964b73589256cb10cc10057c87ac78fc2/wheel-0.37.1.tar.gz
     sha256: e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4
@@ -80,3 +78,9 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/d6/c1/8991e7c5385b897b8c020cdaad718c5b087a6626d1d11a23e1ea87e325a7/async_timeout-4.0.2-py3-none-any.whl
     sha256: 8ca1e4fcf50d07413d66d1a5e416e42cfdf5851c981d679a09851a6853383b3c
+  - type: file
+    url: https://files.pythonhosted.org/packages/ae/0d/dcfe8116c9f31cb251c372742807a15abce28d1efeb2f3c6a7554cbad17f/ustache-0.1.5-py3-none-any.whl
+    sha256: 3d277909dd7bc3012eee101ffa68a241f66222b768fe1c7c77afff9a1d2028fc
+  - type: file
+    url: https://files.pythonhosted.org/packages/d2/a2/8c239dc898138f208dd14b441b196e7b3032b94d3137d9d8453e186967fc/importlib_metadata-4.12.0-py3-none-any.whl
+    sha256: 7401a975809ea1fdc658c3aa4f78cc2195a0e019c5cbc4c06122884e9ae80c23
