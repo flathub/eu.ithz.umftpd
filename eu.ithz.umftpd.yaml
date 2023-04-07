@@ -1,6 +1,6 @@
 app-id: eu.ithz.umftpd
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 command: umftpd
 finish-args:
@@ -14,31 +14,43 @@ modules:
 - name: umftpd
   buildsystem: simple
   build-commands:
-  - pip3 install --prefix=/app --no-index --find-links="file://${PWD}" --ignore-installed setuptools==65.6.0
+  - pip3 install --prefix=/app --no-index --find-links="file://${PWD}" --ignore-installed setuptools
   - pip3 install --prefix=/app --no-index --find-links="file://${PWD}" .
   - mv flatpak/app/* /app/
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.3.2
-    commit: 43e33329dc1c38ffbe6334540db2081bdb7f09df
+    tag: v0.3.3
+    commit: 0596bc22ba83c59823462f7d22ca2aae71418049
   - type: file
-    url: https://files.pythonhosted.org/packages/a2/b8/6a06ff0f13a00fc3c3e7d222a995526cbca26c1ad107691b6b1badbbabf1/wheel-0.38.4.tar.gz
-    sha256: 965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac
+    url: https://files.pythonhosted.org/packages/10/e5/be08751d07b30889af130cec20955c987a74380a10058e6e8856e4010afc/flit_core-3.8.0.tar.gz
+    sha256: b305b30c99526df5e63d6022dd2310a0a941a187bd3884f4c8ef0418df6c39f3
   - type: file
-    url: https://files.pythonhosted.org/packages/1f/97/c03668380f278f1f8b0486d820c142cf224bba1bd78416e1797b52e0e81c/setuptools-65.6.0-py3-none-any.whl
-    sha256: 6211d2f5eddad8757bd0484923ca7c0a6302ebc4ab32ea5e94357176e0ca0840
+    url: https://files.pythonhosted.org/packages/fc/ef/0335f7217dd1e8096a9e8383e1d472aa14717878ffe07c4772e68b6e8735/wheel-0.40.0.tar.gz
+    sha256: cd1196f3faee2b31968d626e1731c94f99cbdb67cf5a46e4f5656cbee7738873
   - type: file
-    url: https://files.pythonhosted.org/packages/40/8a/d63273ed0fa4a3d06f77e7b043f6577d8894e95515b0c187c52e2c0efabb/zipp-3.10.0-py3-none-any.whl
-    sha256: 4fcb6f278987a6605757302a6e40e896257570d11c51628968ccb2a47e80c6c1
+    url: https://files.pythonhosted.org/packages/0b/fc/8781442def77b0aa22f63f266d4dadd486ebc0c5371d6290caf4320da4b7/setuptools-67.6.1-py3-none-any.whl
+    sha256: e728ca814a823bf7bf60162daf9db95b93d532948c4c0bea762ce62f60189078
   - type: file
-    url: https://files.pythonhosted.org/packages/bd/b4/2f8532124bda7470af31b6d9322b5bbb74e3bde94030f9b3a88450f12c8e/cryptography-38.0.3-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-    sha256: b1b52c9e5f8aa2b802d48bd693190341fae201ea51c7a167d69fc48b60e8a959
+    url: https://files.pythonhosted.org/packages/1d/66/8f42c941be949ef2b22fe905d850c794e7c170a526023612aad5f3a121ad/setuptools_scm-7.1.0-py3-none-any.whl
+    sha256: 73988b6d848709e2af142aa48c986ea29592bbcfca5375678064708205253d8e
+  - type: file
+    url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
+    sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
+  - type: file
+    url: https://files.pythonhosted.org/packages/ed/35/a31aed2993e398f6b09a790a181a7927eb14610ee8bbf02dc14d31677f1c/packaging-23.0-py3-none-any.whl
+    sha256: 714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2
+  - type: file
+    url: https://files.pythonhosted.org/packages/5b/fa/c9e82bbe1af6266adf08afb563905eb87cab83fde00a0a08963510621047/zipp-3.15.0-py3-none-any.whl
+    sha256: 48904fc76a60e542af151aded95726c1a5c34ed43ab4134b597665c86d7ad556
+  - type: file
+    url: https://files.pythonhosted.org/packages/ed/d0/f7470892f9f496f3d403fca9b141367b1d5350fcd953ef5761674afafaa7/cryptography-40.0.1-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+    sha256: 63dac2d25c47f12a7b8aa60e528bfb3c51c5a6c5a9f7c86987909c6c79765554
     only-arches:
     - x86_64
   - type: file
-    url: https://files.pythonhosted.org/packages/c1/39/ff2c4dbddf50d79118a14eaba170ad80b65127201a566c359f76ffa34625/cryptography-38.0.3-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
-    sha256: 554bec92ee7d1e9d10ded2f7e92a5d70c1f74ba9524947c0ba0c850c7b011828
+    url: https://files.pythonhosted.org/packages/e9/79/b258803f573bfb202e29f9f56cd73e2b2e2fee1fe2e9cdf03f388919d8cc/cryptography-40.0.1-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+    sha256: 3a4805a4ca729d65570a1b7cac84eac1e431085d40387b7d3bbaa47e39890b88
     only-arches:
     - aarch64
   - type: file
@@ -55,17 +67,17 @@ modules:
     only-arches:
     - aarch64
   - type: file
-    url: https://files.pythonhosted.org/packages/00/3f/ea5cfb789dddb327e6d2cf9377c36d9d8607af85530af0e7001165587ae7/pyOpenSSL-22.1.0-py3-none-any.whl
-    sha256: b28437c9773bb6c6958628cf9c3bebe585de661dba6f63df17111966363dd15e
+    url: https://files.pythonhosted.org/packages/b7/6d/d7377332703ffd8821878794aca4fb54637da654bf3e467ffb32109c2147/pyOpenSSL-23.1.1-py3-none-any.whl
+    sha256: 9e0c526404a210df9d2b18cd33364beadb0dc858a739b885677bc65e105d4a4c
   - type: file
     url: https://files.pythonhosted.org/packages/2f/bc/f03a15bf807698bbecdcf316041e3d79b25a40fa7b6e071e17702ff7b9d4/pyftpdlib-1.5.7.tar.gz
     sha256: 7ea3ce4137db8209af1f6b9ea020590f462c63ed7c7a1240bd596e4d3a7b656e
   - type: file
-    url: https://files.pythonhosted.org/packages/64/9b/14ce4829c2bd0a7be5a78b47857553c90079896b44509c7ed744cba13b13/asyncssh-2.12.0-py3-none-any.whl
-    sha256: 6841c4242c606fd51188c974ec2f4887efeec67ecdfa5b84140711dacd985ab3
+    url: https://files.pythonhosted.org/packages/1e/9f/ad61867b12823f6e2c0ef2b80a704273b9385de707ac4539afa445c0665d/asyncssh-2.13.1-py3-none-any.whl
+    sha256: c90eb5e2b4f9a7cc6e6af01fd844563d722c0d667f8c5f51fe5b3c2a79fa0575
   - type: file
-    url: https://files.pythonhosted.org/packages/0b/8e/f1a0a5a76cfef77e1eb6004cb49e5f8d72634da638420b9ea492ce8305e8/typing_extensions-4.4.0-py3-none-any.whl
-    sha256: 16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e
+    url: https://files.pythonhosted.org/packages/31/25/5abcd82372d3d4a3932e1fa8c3dbf9efac10cc7c0d16e78467460571b404/typing_extensions-4.5.0-py3-none-any.whl
+    sha256: fb33085c39dd998ac16d1431ebc293a8b3eedd00fd4a32de0ff79002c19511b4
   - type: file
     url: https://files.pythonhosted.org/packages/3f/ff/a8d7faaa3573b6e4c775cacbf911a0afbcb4928ce71b3de43119227a396a/zeroconf-0.39.4-py3-none-any.whl
     sha256: d60eae9e9c99d1a168ce9ff9de7e7398c23754a0c2004ded230f8d529c5260a0
