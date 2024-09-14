@@ -21,7 +21,7 @@ modules:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
     tag: v0.3.4
-    commit: adf748a7c2fa6e6a24462b1d38403991c804723c
+    commit: d34c800c0448f4b13c55df6cbd52eca6a391658a
   - type: file
     url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
     sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
