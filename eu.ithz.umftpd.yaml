@@ -19,8 +19,8 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.3.5
-    commit: 8f3490be824792228471d66b0083aa76ef919b64
+    tag: v0.3.6
+    commit: 6ac89c38ee4e9c83b42bdde518718110ff2cb6c8
   # asyncssh-2.20.0
   - type: file
     url: https://files.pythonhosted.org/packages/f2/c5/7a9d42c065f272f74792663194966a68810e851a34c0dd080246bd7308f5/asyncssh-2.20.0-py3-none-any.whl
