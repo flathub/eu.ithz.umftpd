@@ -19,8 +19,8 @@ modules:
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.3.7
-    commit: e055edc8d46a95e4b9ed192a03ec6f67e30efa70
+    tag: v0.3.8
+    commit: ab51b290b45f4655bd2af1c2616c3cc6ed4ffa3b
   # asyncssh-2.20.0
   - type: file
     url: https://files.pythonhosted.org/packages/f2/c5/7a9d42c065f272f74792663194966a68810e851a34c0dd080246bd7308f5/asyncssh-2.20.0-py3-none-any.whl
@@ -57,10 +57,10 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/6d/b0/3742108cf5a2e24edab4e0ac24db9a3858803497e2385270f78a7ed3c525/mstache-0.3.0-py3-none-any.whl
     sha256: 17a53df221fe7cab18bf2250db4ed003db5f5e06d84cf41b1c5caeea6da50cf9
-  # packaging-24.2
+  # packaging-25.0
   - type: file
-    url: https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl
-    sha256: 09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759
+    url: https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl
+    sha256: 29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484
   # pyasynchat-1.0.4
   - type: file
     url: https://files.pythonhosted.org/packages/c2/4f/b4a7aa2a35858d40f970bdb63ab3e9deda35d0d2116b9175f929f37d764d/pyasynchat-1.0.4-py3-none-any.whl
@@ -81,14 +81,14 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/42/22/40f9162e943f86f0fc927ebc648078be87def360d9d8db346619fb97df2b/pyOpenSSL-24.3.0-py3-none-any.whl
     sha256: e474f5a473cd7f92221cc04976e48f4d11502804657a08a989fb3be5514c904a
-  # setuptools-77.0.3
+  # setuptools-80.9.0
   - type: file
-    url: https://files.pythonhosted.org/packages/a9/07/99f2cefae815c66eb23148f15d79ec055429c38fa8986edcc712ab5f3223/setuptools-77.0.3-py3-none-any.whl
-    sha256: 67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c
-  # setuptools-scm-8.2.0
+    url: https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl
+    sha256: 062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922
+  # setuptools-scm-8.3.1
   - type: file
-    url: https://files.pythonhosted.org/packages/10/7c/5a9799042320242c383c4485a2771a37d49e8ce2312ca647653d2fd1a7a4/setuptools_scm-8.2.0-py3-none-any.whl
-    sha256: 136e2b1d393d709d2bcf26f275b8dec06c48b811154167b0fd6bb002aad17d6d
+    url: https://files.pythonhosted.org/packages/ab/ac/8f96ba9b4cfe3e4ea201f23f4f97165862395e9331a424ed325ae37024a8/setuptools_scm-8.3.1-py3-none-any.whl
+    sha256: 332ca0d43791b818b841213e76b1971b7711a960761c5bea5fc5cdb5196fbce3
   # tblib-3.0.0
   - type: file
     url: https://files.pythonhosted.org/packages/9b/87/ce70db7cae60e67851eb94e1a2127d4abb573d3866d2efd302ceb0d4d2a5/tblib-3.0.0-py3-none-any.whl
