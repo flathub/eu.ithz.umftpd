@@ -1,6 +1,6 @@
 app-id: eu.ithz.umftpd
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: umftpd
 finish-args:
@@ -15,16 +15,16 @@ modules:
   buildsystem: simple
   build-commands:
   - pip install --prefix=/app --no-index --find-links="file://${PWD}" --compile .
-  - mv flatpak/app/* /app/
+  - cp -R flatpak/app/* /app/
   sources:
   - type: git
     url: https://gitlab.com/ergoithz/umftpd/
-    tag: v0.3.8
-    commit: ab51b290b45f4655bd2af1c2616c3cc6ed4ffa3b
-  # asyncssh-2.20.0
+    tag: v0.3.9
+    commit: cbab8ed153ac057505bd55eff9ae642ba1f70aac
+  # asyncssh-2.21.0
   - type: file
-    url: https://files.pythonhosted.org/packages/f2/c5/7a9d42c065f272f74792663194966a68810e851a34c0dd080246bd7308f5/asyncssh-2.20.0-py3-none-any.whl
-    sha256: af6888d937c07a4bf31293335a6166b4d87608cdb5957b49547da6ad87ecf174
+    url: https://files.pythonhosted.org/packages/99/56/db25216aa7f385ec71fdc489af80812171515cddbe68c0e515e98a291390/asyncssh-2.21.0-py3-none-any.whl
+    sha256: cf7f3dfa52b2cb4ad31f0d77ff0d0a8fdd850203da84a0e72e62c36fdd4daf4b
   # cffi-1.17.1 (x86_64)
   - type: file
     url: https://files.pythonhosted.org/packages/b2/d5/da47df7004cb17e4955df6a43d14b3b4ae77737dff8bf7f8f333196717bf/cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
@@ -37,16 +37,16 @@ modules:
     sha256: da95af8214998d77a98cc14e3a3bd00aa191526343078b530ceb0bd710fb48a5
     only_arches:
     - aarch64
-  # cryptography-44.0.2 (x86_64)
+  # cryptography-45.0.5 (x86_64)
   - type: file
-    url: https://files.pythonhosted.org/packages/27/61/72e3afdb3c5ac510330feba4fc1faa0fe62e070592d6ad00c40bb69165e5/cryptography-44.0.2-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-    sha256: bc821e161ae88bfe8088d11bb39caf2916562e0a2dc7b6d56714a48b784ef0bb
+    url: https://files.pythonhosted.org/packages/07/8b/9ef5da82350175e32de245646b1884fc01124f53eb31164c77f95a08d682/cryptography-45.0.5-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+    sha256: e74d30ec9c7cb2f404af331d5b4099a9b322a8a6b25c4632755c8757345baac5
     only_arches:
     - x86_64
-  # cryptography-44.0.2 (aarch64)
+  # cryptography-45.0.5 (aarch64)
   - type: file
-    url: https://files.pythonhosted.org/packages/30/ec/7ea7c1e4c8fc8329506b46c6c4a52e2f20318425d48e0fe597977c71dbce/cryptography-44.0.2-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
-    sha256: 29ecec49f3ba3f3849362854b7253a9f59799e3763b0c9d0826259a88efa02f1
+    url: https://files.pythonhosted.org/packages/b1/05/2194432935e29b91fb649f6149c1a4f9e6d3d9fc880919f4ad1bcc22641e/cryptography-45.0.5-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl
+    sha256: 3a264aae5f7fbb089dbc01e0242d3b67dffe3e6292e1f5182122bdf58e65215d
     only_arches:
     - aarch64
   # ifaddr-0.2.0
@@ -77,10 +77,10 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/b4/0c/32bf0a7c88efe147bc3bc6586216d92269d196c59f149b05efa973834946/pyftpdlib-2.0.1.tar.gz
     sha256: ef0d172a82bfae10e2dec222e87533514609d41bf4b0fd0f07e29d4380fb96bf
-  # pyopenssl-24.3.0
+  # pyopenssl-25.1.0
   - type: file
-    url: https://files.pythonhosted.org/packages/42/22/40f9162e943f86f0fc927ebc648078be87def360d9d8db346619fb97df2b/pyOpenSSL-24.3.0-py3-none-any.whl
-    sha256: e474f5a473cd7f92221cc04976e48f4d11502804657a08a989fb3be5514c904a
+    url: https://files.pythonhosted.org/packages/80/28/2659c02301b9500751f8d42f9a6632e1508aa5120de5e43042b8b30f8d5d/pyopenssl-25.1.0-py3-none-any.whl
+    sha256: 2b11f239acc47ac2e5aca04fd7fa829800aeee22a2eb30d744572a157bd8a1ab
   # setuptools-80.9.0
   - type: file
     url: https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl
@@ -89,10 +89,10 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/ab/ac/8f96ba9b4cfe3e4ea201f23f4f97165862395e9331a424ed325ae37024a8/setuptools_scm-8.3.1-py3-none-any.whl
     sha256: 332ca0d43791b818b841213e76b1971b7711a960761c5bea5fc5cdb5196fbce3
-  # tblib-3.0.0
+  # tblib-3.1.0
   - type: file
-    url: https://files.pythonhosted.org/packages/9b/87/ce70db7cae60e67851eb94e1a2127d4abb573d3866d2efd302ceb0d4d2a5/tblib-3.0.0-py3-none-any.whl
-    sha256: 80a6c77e59b55e83911e1e607c649836a69c103963c5f28a46cbeef44acf8129
+    url: https://files.pythonhosted.org/packages/27/44/aa5c8b10b2cce7a053018e0d132bd58e27527a0243c4985383d5b6fd93e9/tblib-3.1.0-py3-none-any.whl
+    sha256: 670bb4582578134b3d81a84afa1b016128b429f3d48e6cbbaecc9d15675e984e
   # typing-extensions-4.12.2
   - type: file
     url: https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl
@@ -101,15 +101,15 @@ modules:
   - type: file
     url: https://files.pythonhosted.org/packages/0b/2c/87f3254fd8ffd29e4c02732eee68a83a1d3c346ae39bc6822dcbcb697f2b/wheel-0.45.1-py3-none-any.whl
     sha256: 708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248
-  # zeroconf-0.136.2 (x86_64)
+  # zeroconf-0.147.0 (x86_64)
   - type: file
-    url: https://files.pythonhosted.org/packages/b4/13/ca435edfdcfc1661029aaaec40d9668ec131bb9c28bfda62470fc3b6268a/zeroconf-0.136.2-cp312-cp312-manylinux_2_36_x86_64.whl
-    sha256: 1e0f0df103bc27816b00b983cdc404423fd14daaa4708ad7764a9ca3830a333d
+    url: https://files.pythonhosted.org/packages/fa/11/6499c380e8e7f8d24586ed8fc6339079541b4ac244a39fe2b65558140917/zeroconf-0.147.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+    sha256: 34b5f1f472eadd090232af6b52c16c417359d9541e7bb31afbde3a0e33e55594
     only_arches:
     - x86_64
-  # zeroconf-0.136.2 (aarch64)
+  # zeroconf-0.147.0 (aarch64)
   - type: file
-    url: https://files.pythonhosted.org/packages/cc/65/d7a215dd9c67c3dd6674792af58155e15387b30194bd4258fea25e284d64/zeroconf-0.136.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
-    sha256: cb14c95c428ad003f0a8fdde87f0c0ba89a945ced468421ad24818e243e3fd0e
+    url: https://files.pythonhosted.org/packages/fd/33/6c52100705bc118b77d1516499f737074a9da7965f268243234d21fa872b/zeroconf-0.147.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+    sha256: 04018f48c38fa174af8e2c6cd00e6fb8a9a7269a187ba1f52cf32c14f2ddd941
     only_arches:
     - aarch64
